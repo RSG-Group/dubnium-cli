@@ -1,0 +1,45 @@
+{
+  "name": "lenin-cli",
+  "version": "0.1.0",
+  "description": "The boilerplate manager to rule 'em all. Language agnostic, built upon Git/npm and highly configurable. Unifies angular-cli, vue-cli, CNA, CRNA and CRA.",
+  "bin": {
+    "lenin": "cli.js",
+    "lenin-cli": "cli.js"
+  },
+  "scripts": {
+    "test": "ava && eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSG-Group/lenin-cli.git"
+  },
+  "dependencies": {
+    "execa": "^0.8.0",
+    "meow": "^3.7.0"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "eslint": "^4.9.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "peerDependencies": {},
+  "keywords": [
+    "boilerplate",
+    "manager",
+    "cli",
+    "cli-app"
+  ],
+  "engines": {
+    "node": ">= 4"
+  },
+  "author": "Ibrahim Ansari <ansari.ibrahim1@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/RSG-Group/lenin-cli/issues"
+  },
+  "homepage": "https://github.com/RSG-Group/lenin-cli#readme"
+}
