@@ -1,37 +1,33 @@
-# lenin-cli
-
-[![Build Status](https://travis-ci.org/RSG-Group/lenin-cli.svg?branch=master)](https://travis-ci.org/RSG-Group/lenin-cli)
+# dubnium-cli
 
 The boilerplate manager to rule 'em all. Language agnostic, built upon Git and highly configurable. Unifies angular-cli, vue-cli, CNA, CRNA and CRA.
 
-### README below here in progress
-
 ## Install
 
-```
-$ npm install --global <%= moduleName %>-cli
+```zsh
+npm install --global dubnium-cli
 ```
 
+### README below here in progress
 
 ## Usage
 
-```
-$ <%= moduleName %> --help
+```zsh
+$ dubnium --help
 
   Usage
-    <%= moduleName %> [input]
+    dubnium [input]
 
   Options
     --foo  Lorem ipsum [Default: false]
 
   Examples
-    $ <%= moduleName %>
+    $ dubnium
     unicorns & rainbows
-    $ <%= moduleName %> ponies
+    $ dubnium ponies
     ponies & rainbows
 ```
 
-
 ## License
 
-MIT © [<%= name %>](https://github.com/<%= githubUsername %>)
+Apache 2.0 © [RSG-Group](https://github.com/RSG-Group)

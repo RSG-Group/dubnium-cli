@@ -1,10 +1,10 @@
 {
-  "name": "lenin-cli",
+  "name": "dubnium-cli",
   "version": "0.1.0",
   "description": "The boilerplate manager to rule 'em all. Language agnostic, built upon Git/npm and highly configurable. Unifies angular-cli, vue-cli, CNA, CRNA and CRA.",
   "bin": {
-    "lenin": "cli.js",
-    "lenin-cli": "cli.js"
+    "dubnium": "cli.js",
+    "dubnium-cli": "cli.js"
   },
   "scripts": {
     "test": "webpack && ava && eslint .",
@@ -13,27 +13,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RSG-Group/lenin-cli.git"
+    "url": "git+https://github.com/RSG-Group/dubnium-cli.git"
   },
   "dependencies": {
     "execa": "^0.8.0",
     "meow": "^3.7.0"
   },
   "devDependencies": {
-    "ava": "^0.22.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-minify-webpack-plugin": "^0.2.0",
-    "babel-preset-env": "^1.6.1",
-    "eslint": "^4.9.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.0",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "webpack": "^3.8.1"
+    "ava": "1.0.0-beta.4",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.1.0"
   },
-  "peerDependencies": {},
   "keywords": [
     "boilerplate",
     "manager",
@@ -46,7 +40,7 @@
   "author": "Ibrahim Ansari <ansari.ibrahim1@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/RSG-Group/lenin-cli/issues"
+    "url": "https://github.com/RSG-Group/dubnium-cli/issues"
   },
-  "homepage": "https://github.com/RSG-Group/lenin-cli#readme"
+  "homepage": "https://github.com/RSG-Group/dubnium-cli#readme"
 }
