@@ -3,30 +3,35 @@
   "version": "0.1.0",
   "description": "The boilerplate manager to rule 'em all. Language agnostic, built upon Git/npm and highly configurable. Unifies angular-cli, vue-cli, CNA, CRNA and CRA.",
   "bin": {
-    "dubnium": "cli.js",
-    "dubnium-cli": "cli.js"
+    "dubnium": "lib/index.js",
+    "dubnium-cli": "lib/index.js"
   },
   "scripts": {
-    "test": "webpack && ava && eslint .",
-    "watch": "webpack -w",
-    "build": "webpack"
+    "test": "yarn-or-npm run build && ava && eslint .",
+    "build": "babel src/ -d lib/",
+    "start": "yarn-or-npm run build && echo && node lib/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RSG-Group/dubnium-cli.git"
   },
   "dependencies": {
-    "execa": "^0.8.0",
-    "meow": "^3.7.0"
+    "meow": "^3.7.0",
+    "ora": "^2.1.0",
+    "sudo-block": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.46",
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
     "ava": "1.0.0-beta.4",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^3.1.0",
+    "yarn-or-npm": "^2.0.4"
   },
   "keywords": [
     "boilerplate",

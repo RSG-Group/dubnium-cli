@@ -6,8 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Built files.
-cli.js
-cli.js.map
+lib/
 
 # WebStorm is bad.
 .idea
