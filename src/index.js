@@ -1,4 +1,5 @@
 #! /usr/bin/env node
+import '@babel/polyfill'
 import meow from 'meow'
 import createOperation from './create'
 import sudoBlock from 'sudo-block'
@@ -10,8 +11,8 @@ const cliArgs = meow(`
     $ dubnium [subcommand] (--options) [GitHub/npm boilerplate]
 
   Subcommands
-    create  Create a new project in a specified subfolder based on a boilerplate.
-      Usage: dubnium create [project name] [boilerplate] (flags)
+    create  Create a new project in a specified folder based on a boilerplate.
+      Usage: dubnium create [path to project] [boilerplate] (flags)
       e.g. dubnium create test-project create-react-app --dubnium
 
   Options
@@ -42,11 +43,12 @@ const cliArgs = meow(`
   inferType: true
 })
 
-const subcommands = new Map([['create', createOperation]])
+const subcommands = new Map([
+  ['create', createOperation]
+])
 
-if (subcommands.has(cliArgs.input[0])) {
-  createOperation(cliArgs)
-} else {
+if (subcommands.has(cliArgs.input[0])) subcommands.get(cliArgs.input[0])(cliArgs)
+else {
   console.log(`Error: sub-command does not exist!
 Available subcommands: create`)
 }

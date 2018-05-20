@@ -7,17 +7,21 @@
     "dubnium-cli": "lib/index.js"
   },
   "scripts": {
-    "test": "yarn-or-npm run build && ava && eslint .",
+    "test": "babel src/ -d lib/ && ava && eslint .",
     "build": "babel src/ -d lib/",
-    "start": "yarn-or-npm run build && echo && node lib/index.js"
+    "start": "babel src/ -d lib/ && echo && node lib/index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RSG-Group/dubnium-cli.git"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0-beta.47",
+    "chalk": "^2.4.1",
     "meow": "^3.7.0",
+    "node-fetch": "^2.1.2",
     "ora": "^2.1.0",
+    "registry-url": "^3.1.0",
     "sudo-block": "^2.0.0"
   },
   "devDependencies": {
@@ -30,8 +34,7 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "yarn-or-npm": "^2.0.4"
+    "eslint-plugin-standard": "^3.1.0"
   },
   "keywords": [
     "boilerplate",
