@@ -43,17 +43,17 @@ const identifyTypeOfBoilerplate = async (boilerplate, spinner) => {
     spinner.color = 'green'
     spinner.text = 'Checking npm for boilerplate of the same name.'
     // If it is a valid package, return type as npm.
-    if (verifyNpm(boilerplate) === 'npm') return 'npm'
+    if (await verifyNpm(boilerplate) === 'npm') return 'npm'
     // Ask GitHub if it has such a repo.
     spinner.color = 'yellow'
     spinner.text = 'Checking GitHub for a repository of the same name.'
     // If it is a valid repository, return github as type.
-    if (verifyGitHub(boilerplate) === 'github') return 'github'
+    if (await verifyGitHub(boilerplate) === 'github') return 'github'
     // Ask awesome-dubnium if they have a boilerplate like this.
     spinner.color = 'red'
     spinner.text = 'Checking Awesome Dubnium for a repository of the same name.'
     // If it is a valid boilerplate, return dubnium as type.
-    // if (verifyDubnium(boilerplate) === 'dubnium') return 'dubnium'
+    // if (await verifyDubnium(boilerplate) === 'dubnium') return 'dubnium'
     // If no match found, return invalid.
     return 'invalid'
   } catch (e) { return 'invalid' }
@@ -110,7 +110,8 @@ export default async function createProject (cliArgs) {
   }
   // We display the spinner.
   spinner.color = 'blue'
-  const specified = fetchFrom
+  const specified = fetchFrom === 'dubnium' ? 'Awesome Dubnium'
+    : fetchFrom === 'github' ? 'GitHub' : fetchFrom
   spinner.text = 'Fetching boilerplate ' + cliArgs.input[2] + ' from ' + specified
   // We fetch the boilerplate to /tmp/boilerplate
 }
